@@ -1,0 +1,27 @@
+# classification
+# kth-nearest neighbor 
+
+- have labeled data and build a model based on that and then classify unknown data with any cluster
+- need to think about k 
+- pick a number k to find k neighbors tht are closest to the node
+- pick the one cluster that has more neighbors selected 
+
+- accuracy 
+- degree of confidence 
+	- ' - - + ' 66% confidence on '-'
+	
+
+- distance : Euclidean distance 
+	sqrt(sum to n (n -> # of dimensions) ([qi - pi]**2))
+
+	q = (1,3)
+	p = (2,5)
+
+	sqrt((1-2)^2+(3-5)^2) -> eu of q and p 
+	# euclidean_distance calculation:
+	# plot1 = [1,3]
+	# plot2 = [2,5]
+	# euclidean_distance = sqrt((plot1[0]-plot2[0])**2 +(plot1[1]-plot2[1])**2)
+	# print(euclidean_distance)
+
+- confidence 

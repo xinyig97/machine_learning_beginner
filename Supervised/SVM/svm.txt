@@ -1,0 +1,7 @@
+# support vector machine -> SVM
+binary classifier, separate into 2 groups -> positive and negative 
+-> against linear data, can be a curve line 
+best seperating hypeplane : the one that would generate the greatest distance from the plan to the closest points
+for unknown future data: it'll check which that node lies on on the plane
+
+

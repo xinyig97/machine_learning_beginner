@@ -1,0 +1,27 @@
+- 2D regression best fit line :(y_hat line)
+
+y = mx+b 
+m -> slope 
+b -> y-intercept 
+
+- to calculate m:
+m =((mean(x)*mean(y))-mean(x*y))/((mean(x))^2 - mean(x^2))
+
+
+- to calculate b:
+b = mean(y)-m*mean(x)
+
+
+
+- accuracy of the best_fit_line -> how good is the line 
+" square error  "
+e = distance between data and the line 
+we use e^2 
+r^2 = 1 - se(best_fit(y))/se(mean(y)) 
+-  mean(y) - > just a straight line
+the higher r^2, the more accurate
+
+
+
+
+

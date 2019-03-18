@@ -114,7 +114,9 @@ slack >= 0
 	- the lower C, the more tolerant for slacks 
 
 
-
+more than 2 classes :
+- ovr : one over the rest 
+- ono: one over one
 
 
 

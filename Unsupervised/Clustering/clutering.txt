@@ -1,0 +1,7 @@
+just the feature sets 
+- flat -> you tell the machine how many clusters you want and how many groups you want 
+- hierachel -> machine figures it out itself how many are there in the featrueset
+
+
+- k means : flat 
+- meanshift : hierachal 

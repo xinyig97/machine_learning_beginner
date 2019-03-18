@@ -1,0 +1,22 @@
+- k is the number of groups that you want the machine to classify 
+- flat 
+
+
+- take entire dataset, choose k centeriods(center of clusters)
+- calculate the distance of other nodes to those k centeroids and based on distance, classify the classes
+- totally randomly chosen
+- then find the center of each groups as new centeroids
+- keep repeating the process till centeroids does not change 
+
+
+parameters:
+- tolerance 
+- max_iteration
+
+
+downside: 
+- want to group in relative same sizes 
+	- mouse data set 
+- scaling 
+
+from unsupervised, after finding the classifier, use it as supervised 

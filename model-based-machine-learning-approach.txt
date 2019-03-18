@@ -1,0 +1,8 @@
+model : a set of assumptions about a problem domain, expressed in a precise math form, that is used to create a machine learning solution
+http://mbmlbook.com/MurderMystery.html
+
+https://machinelearningmastery.com/start-here/
+
+http://luthuli.cs.uiuc.edu/~daf/courses/AML-18-Fall/AMLbook-28-Aug-18.pdf
+
+https://blog.statsbot.co/machine-learning-algorithms-183cc73197c 

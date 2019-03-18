@@ -4,7 +4,104 @@ binary classifier, separate into 2 groups -> positive and negative
 best seperating hypeplane : the one that would generate the greatest distance from the plan to the closest points
 for unknown future data: it'll check which that node lies on on the plane
 
+
+vector space === feature space 
+
 - fundamental vector calculation:
 	- vector direction 
 	- vector magnitude 
-	- vector dot product
+
+- vector dot product
+
+for an unknown data point, it will project the point of the vector that from the origin and is perpentual to the plane and calculate to see if the unknown data point is on which side of the plane 
+- calculation:
+	- if u * w + b > 0: one side 
+	- else if <0 : the other side 
+	- else if ==0 : on the boundary 
+- u -> unknown 
+- w -> 
+- b -> bias 
+
+
+support vector : y*(x*w+b)-1 = 0 
+	- y -> class 
+	- x -> feature 
+	- w 
+	- b -> bias 
+
+
+hyper plane : the width between two /2 
+width = (xa - xb)*w / |w| 	-> maximize the width equation 
+ - width = 2/|w|  -> minimize |w| 
+ -> minimize 1/2 * |w| ^2 
+ -> L(w,b) = 1/2 * |w| ^2 - sum(alplai * (y(x*w+b)-1)) 
+ -> minimize w, maximize b 
+
+
+
+ SVM. 
+
+ downsize : complication, mathmatically or in optimization 
+ needs all features on the memory, kind of annoying 
+ minibatch, SIO sequential optimatization 
+
+ upside : once trained a classifier, no need for old features anymore 
+
+
+# hyperplane: x dot w + b 
+# hyperplane for plus: x dot w + b = 1 -> sv 
+# hyperplane for negative: x dot w + b = -1 ->sv 
+# classification: the sign of x dot w + b 
+# minimize |w|  
+# maximize b 
+# class multiple (known feature dot w + b) >= 1 
+
+
+convex problem 
+- convex optimization problem 
+- python libraries:
+	- cvxopt 
+	- qp svm 
+	- libsvm 
+
+
+what about non-linear data 
+
+
+kernels :
+- takes two input and outputs the similarities 
+inner product is the same as dot product 
+
+for a feature x :
+ classification : y = sign ( x.w + b)  => return a scalar 
+
+constraints:
+- y(x.w+b)-1 >= 0 
+- w = sum(alpha * y.x )
+L = sum ( aplha . -1/2 sum (alpha i * alpha j * yi * yj . (xi. xj)))
+
+k(x,x') = z.z' => convert x and x' to be z and z' and take the dot product => produce a scalar value
+z = function(x)
+z' = function(x')
+functions need to be the same 
+kernal can be denoted as phi 
+y = w phi x + b => kernel 
+
+featureset = [x1, x2] => second order polynomial 
+Z = [1,x1,x2,x1*x1,x2*x2,x1*x2]
+z is the same as z' => z' = [1,x1',x2',x1*x1 ' ,x2*x2' , x1*x2 ']
+k(x,x') = z . z' = 1 + x1*x1' + x2*x2' + x1*x1*x1'*x1' + x2*x2*x2'*x2' + x1*x2*x1'*x2' => in the z space 
+k(x,x') = (1+x.x')^p p=2, n=2 
+        = (1 + x1x1' + x2x2' + ...xnxn')^p 
+
+- rbf radius based functions 
+k(x,x') = exp(-ganma|x-x'|^2) infinite dimensions 
+         
+
+
+
+
+
+
+
+

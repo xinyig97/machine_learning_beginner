@@ -65,6 +65,9 @@ convex problem
 	- libsvm 
 
 
+
+
+
 what about non-linear data 
 
 
@@ -96,7 +99,19 @@ k(x,x') = (1+x.x')^p p=2, n=2
 
 - rbf radius based functions 
 k(x,x') = exp(-ganma|x-x'|^2) infinite dimensions 
+
+soft margin svm : -> have some violatin 
+- overfit: is wrong. 
+- # of support vectors / # of samples  -> the closer to 1, the worse you are 
          
+hard margin svm : -> have no violation, perfectly linearly separable
+
+slack : like the error rate tolerance -> dont overfit your data 
+slack >= 0 
+- y(x.w +b) >= 1- slack 
+- minimize the (1/2 * |w|^2) +  C * sum of slacks 
+	- the higher C, the less tolerant for slacks 
+	- the lower C, the more tolerant for slacks 
 
 
 

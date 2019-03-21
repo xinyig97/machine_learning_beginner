@@ -1,19 +1,8 @@
 import matplotlib.pyplot as plt 
-from matplotlib import style
-style.use('ggplot')
 import numpy as np 
-
-X = np.array([[1,2],
-				[1.5,1.8],
-				[5,8],
-				[8,8],
-				[1,0.6],
-				[9,11]])
-
-plt.scatter(X[:,0],X[:,1],s=150,linewidths = 5)
-plt.show()
-
-colors = 10*['g','r','c','b','k']
+from sklearn import preprocessing
+from sklearn.model_selection import cross_validate
+import pandas as pd 
 
 class k_means:
 	def __init__(self,k=2, tol = 0.001, max_iter = 300): # tol is how much the centeroids is gonna change
@@ -57,21 +46,40 @@ class k_means:
 		classification = distances.index(min(distances))
 		return classification
 
+def handle_non_numerical_data(df):
+	columns = df.columns.values
+	for column in columns:
+		text_digit_vals = {}
+		def convert_to_int(val):
+			return text_digit_vals[val]
+		if df[column].dtype != np.int64 and df[column].dtype != np.float64:
+			column_contents = df[column].values.tolist()
+			unique_elements = set(column_contents)
+			x = 0
+			for unique in unique_elements:
+				if unique not in text_digit_vals:
+					text_digit_vals[unique] = x 
+					x += 1
+			df[column] = list(map(convert_to_int,df[column]))
+	return df 
+
+df = pd.read_excel('titanic.xls')
+df.drop(['body','name'],1,inplace=True)
+df.fillna(0,inplace=True)
+df = handle_non_numerical_data(df)
+df.drop(['ticket','home.dest'],1,inplace=True)
+X = np.array(df.drop(['survived'],1).astype(float))
+print(df.head())
+X = preprocessing.scale(X)
+y = np.array(df['survived'])
 clf = k_means()
 clf.fit(X)
-for centroid in clf.centeroids:
-	plt.scatter(clf.centeroids[centroid][0],clf.centeroids[centroid][1],marker = 'o', color = 'k', s =150, linewidths= 5)
+correct = 0
+for i in range(len(X)):
+    predict_me = np.array(X[i].astype(float))
+    predict_me = predict_me.reshape(-1,len(predict_me))
+    prediction = clf.predict(predict_me)
+    if prediction == y[i]:
+        correct += 1 
 
-for classification in clf.classifications:
-	color = colors[classification]
-	for featureset in clf.classifications[classification]:
-		plt.scatter(featureset[0],featureset[1],marker='x',color = color, s=150,linewidths= 5)
-
-
-unknowns = np.array([[1,3],[8,9],[5,4],[6,4],[0,3]])
-for unknown in unknowns:
-	classification = clf.predict(unknown)
-	plt.scatter(unknown[0],unknown[1],marker='*',color = colors[classification],s=150,linewidths=5)
-
-
-plt.show()
+print(correct/len(X))

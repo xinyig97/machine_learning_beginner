@@ -10,3 +10,8 @@
 - for machine learning side project : https://www.dezyre.com/article/top-10-machine-learning-projects-for-beginners/397
 
 - for applied machine learning, find cs498 uiuc aml 
+
+- for anomaly intelligence:
+	 - https://towardsdatascience.com/a-note-about-finding-anomalies-f9cedee38f0b
+	 - https://drive.google.com/file/d/0B1_XUjaAXeV3NmxhbEFtZVZ4TmM/view
+	 - https://github.com/shubhomoydas/ad_examples

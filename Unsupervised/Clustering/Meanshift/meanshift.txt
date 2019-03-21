@@ -1,0 +1,2 @@
+hierarchical clustering 
+machine decides how many clustering it would have 

@@ -24,3 +24,13 @@
 - `import nltk`
 - `nltk.download()`
 - `download add`
+
+- thoughts on modeling:
+- might could use messages to check for modeling / patterns 
+- but limited to accuracy and the size of data available 
+- should try tho :	
+	- parse out messages from events and meta-events 
+	- generate lexcion -> how ?
+	- train and test 
+- helpful resources:
+	- generate csv for messages from kafka consumers : https://stackoverflow.com/questions/33606287/is-it-possible-to-write-kafka-consumer-received-output-to-a-file-using-java

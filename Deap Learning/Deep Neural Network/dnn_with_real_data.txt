@@ -17,5 +17,6 @@
         - using buffer and running batch by batch through streaming 
     - training takes too long 
         - use gpu / parallel programming -> ece 408 came in !!
+        - tpu : tensor processing unit 
 
 - save the model if the accuracy is high enough 

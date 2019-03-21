@@ -1,2 +1,14 @@
 hierarchical clustering 
 machine decides how many clustering it would have 
+
+- all featureset is a cluster center / centroid itself 
+
+- radius / bandwidth 
+    - a radius around every data point 
+    - find all data points within that bandwidth and take the average position of all data points to calculate for a new centroid
+    - does this for all shifted centroid for each node 
+    - utill no change in the centroid, get optimized 
+    - can have different level of bandwidth 
+
+- convergence -> when all shifted centeroids come to one point 
+- divergence -> 

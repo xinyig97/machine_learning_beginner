@@ -12,3 +12,10 @@
             if it does, set the corresponding index to 1, otherwise left 0
 
 
+- some limitations / constraints that need to be considered : 
+    - data too big, can't fit in the memory :
+        - using buffer and running batch by batch through streaming 
+    - training takes too long 
+        - use gpu / parallel programming -> ece 408 came in !!
+
+- save the model if the accuracy is high enough 

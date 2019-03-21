@@ -1,0 +1,21 @@
+tensorflow is a package from google -> google! 
+- first of all, need to install tensorflow on mac :
+    - follow the tutorial: https://www.tensorflow.org/install/pip
+
+- run chunk by chunk 
+- not like python, running line by line 
+- tensorflow take a chuck of codes and running in the backgorund and come back with the end results 
+
+- interactive sessions : interactive bash
+
+- tensor: an array / a matrix 
+- tensorflow: functions on tensors 
+- matrix manuplication 
+
+- tensorflow is said to be a library for machine learning / deep learning 
+but more like a library for deep learnings
+
+
+python is slow 
+c++ is fase 
+and thats why cuda runs with c code 

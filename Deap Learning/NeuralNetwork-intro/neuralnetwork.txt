@@ -1,0 +1,40 @@
+deep learning with neural networks and tensorflow introduction 
+
+
+- biological neuron:
+    - anotomy of a neuron :
+        - denarites - neuron - axon - axon terminal - synapse - 
+
+    some inputs come through the denarites of one neuron and pass along to the neuron, something happened to those inputs in the neuron and generate 
+    an output from the neuron and got passed along to the axon then axon terminal, depending on some thershold, it might pass through the synapse or not.
+    if it does, the processed generated output got passed to the next neuron as the input through denarites
+
+- artifical neuron:
+    - similar to the biological neuron
+    - anatomy of a neuron: 
+        - inputs - weights on each inputs - processing function - step functions (threshold function) - output - 
+        - output would be 1 or 0 
+        - step function is not technical irl, since either a 1 or 0 does not help that much 
+            - people use sigmod fuction to scale the output, thus instead of calling it a threshold function, it;s called activation function
+    if it overcome the threshold, the output would be an 1 and got passed along to the next neuron. otherwise it got outputed as a 0 
+
+ 
+ regular neural network : has one hidden layer 
+ deep neural networl: has 2 or more hidden layers 
+
+
+neural network is one type of machine learning model and so far, it's the best machine learning model 
+- need a huge amount of input samples 
+- we dont know how the modeling it does in neural network 
+- neural network generates its own model (logical model instead of only classfication )
+
+
+where to get the huge amount of data:
+- imagenet 
+- ltk 
+- wikipediea dump
+- chat log 
+- crawl reddit 
+- machinelearning sub-reddit 
+
+

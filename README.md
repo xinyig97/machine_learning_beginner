@@ -15,3 +15,5 @@
 	 - https://towardsdatascience.com/a-note-about-finding-anomalies-f9cedee38f0b
 	 - https://drive.google.com/file/d/0B1_XUjaAXeV3NmxhbEFtZVZ4TmM/view
 	 - https://github.com/shubhomoydas/ad_examples
+	
+- to get htop: brew install htop, run as 'sudo htop'

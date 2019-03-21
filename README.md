@@ -17,3 +17,10 @@
 	 - https://github.com/shubhomoydas/ad_examples
 	
 - to get htop: brew install htop, run as 'sudo htop'
+
+- nltk : natural language toolkit :https://www.nltk.org/
+- `pip3 install nltk`
+- `python3 `
+- `import nltk`
+- `nltk.download()`
+- `download add`

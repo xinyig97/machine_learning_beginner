@@ -1,0 +1,14 @@
+- word - numeric 
+- lexcon 
+- each word has an id 
+- hot, not have to be one hot 
+
+
+- global lexicon : 
+[chair,table,spoon,television]
+    - when come a new string : 
+        "I pulled the chair up to the table"
+        - np.zeros(len(lexicon)) -> [1 1 0 0] -> walk through the string and check each word if that exists in the lexicon or not,
+            if it does, set the corresponding index to 1, otherwise left 0
+
+

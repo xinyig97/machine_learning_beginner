@@ -104,7 +104,7 @@ for each_game in range(100):
         if len(pre_o)==0:
             action = random.randrange(0,2)
         else:
-           # action = np.argmax(model.predict(pre_o.reshape(-1,len(pre_o),1))[0])
+            action = np.argmax(model.predict(pre_o.reshape(-1,len(pre_o),1))[0])
         choices.append(action)
         new_ob, reward, done, info  = env.step(action)
         pre_o = new_ob

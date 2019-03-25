@@ -84,7 +84,7 @@ def train_model(training_data, model  = False):
     Y = np.array([i[1] for i in training_data])
     if not model:
         model = neural_network_model(input_size = len(X[0]))
-    model.fit({'input':X},{'targets':Y}, n_epoch= 5, snapshot_step= 500, show_metric= True, run_id='openaistuff')
+    model.fit({'input':X},{'targets':Y}, n_epoch= 3, snapshot_step= 500, show_metric= True, run_id='openaistuff')
     return model
 
 training_data = initial_population()
@@ -94,7 +94,7 @@ model = train_model(training_data)
 
 scores = []
 choices = []
-for each_game in range(10):
+for each_game in range(100):
     score = 0
     game_memory =[]
     pre_o = []
@@ -105,3 +105,13 @@ for each_game in range(10):
             action = random.randrange(0,2)
         else:
             action = np.argmax(model.predict(pre_o.reshape(-1,len(pre_o),1))[0])
+        choices.append(action)
+        new_ob, reward, done, info  = env.step(action)
+        pre_o = new_ob
+        game_memory.append([new_ob,action])
+        score += reward
+        if done:
+            break
+    scores.append(score)
+
+print('aveger:' , sum(scores)/len(scores))

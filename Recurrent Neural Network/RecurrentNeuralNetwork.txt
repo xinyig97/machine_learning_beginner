@@ -2,6 +2,12 @@ more than the traditional dnn
 - order of events happening cant be sensed by tradition deep neural network
 - catch a ball, order of frames decided the travel direction
 - more used with natural language data
+- with traditional neural network: feed forward, back propogation 
+- but we want to take the order of events happening into consideration 
+
+recurrent neural network :
+- sequential and temporary events where order matters
+
 
 - recurrent neural network explaination :
     - x1 - a - o1
@@ -12,8 +18,10 @@ more than the traditional dnn
 
 - long short term memory cell: 
     - x - {
-        recurrent, 
-        forget gate / keep gate,
-        add what?,
-        output what?
+        recurrent,  
+        forget gate / keep gate,  -> for recurrent element, what should we keep or leave 
+        add what?, -> for new input 
+        output what? 
     } - o
+
+

@@ -1,0 +1,14 @@
+- detect content in image
+- looking for vertical line / horizontal line / edges / ... 
+
+
+- each layer / hidden layer  consists of ( convolution + pool )
+- fully connected layer 
+- output layer -> fully connected layer 
+
+- input data -> convolution(feature maps) -> pool -> fully connected layer -> output 
+    - when doing convolution, actually generates featuremaps 
+    - after the featuremaps, we do pooling on the featuremaps   
+        - pooling can be any type of evaluation on the featuremaps, 
+        - ie. find the max / min /average / mean /...
+    - convolution + pool => hidden layer 

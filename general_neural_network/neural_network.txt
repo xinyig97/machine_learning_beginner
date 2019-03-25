@@ -1,0 +1,6 @@
+- for neural network, it requires a huge amount of data 
+- once we understand how the model is built, we could use script to generate data for training, ie math / physics 
+
+
+- openAI : https://gym.openai.com/envs/#classic_control 
+- should play with :  https://www.kaggle.com/datasets?utm_medium=paid&utm_source=google.com+search&utm_campaign=datasets&gclid=EAIaIQobChMIhrfT9Zae4QIVA7nACh3RJAM5EAAYASAAEgImOvD_BwE

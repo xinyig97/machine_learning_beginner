@@ -1,0 +1,19 @@
+more than the traditional dnn 
+- order of events happening cant be sensed by tradition deep neural network
+- catch a ball, order of frames decided the travel direction
+- more used with natural language data
+
+- recurrent neural network explaination :
+    - x1 - a - o1
+    - x2 - (o1)-a-o2
+    - x3 - (o2) - a - o3 
+    - x4 - (o3) a - o4 
+    previous ouput chained to next input
+
+- long short term memory cell: 
+    - x - {
+        recurrent, 
+        forget gate / keep gate,
+        add what?,
+        output what?
+    } - o
